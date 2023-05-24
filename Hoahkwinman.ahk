@@ -195,7 +195,7 @@ if (Style & 0xC40000) {
   Tooltip, Title bar switched off, 0, 0
 } else {
   WinSet, Style, +0xC40000, A
-  Tooltip, Title bar switched off, 0, 0
+  Tooltip, Title bar switched on, 0, 0
 }
 SetTimer, RemoveToolTip, 500
 return
