@@ -187,6 +187,19 @@ CoordMode, Mouse, Window ; Restore the setting
 Tooltip
 return
 
+; Switch alwaysontop
+#'::
+WinGet ExStyle, ExStyle, A
+if (ExStyle & 0x8) {
+  WinSet, AlwaysOnTop, Off, A
+  Tooltip, Always on top switched off, 0, 0
+} else {
+  WinSet, AlwaysOnTop, On, A
+  Tooltip, Always on top switched on, 0, 0
+}
+SetTimer, RemoveToolTip, 500
+return
+
 ; Switch titlebar
 #`;::
 WinGet Style, Style, A
